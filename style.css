@@ -20,7 +20,7 @@ body {
     position: relative;
     width: 40rem;
     height: 26rem;
-    background-color: white;
+    background-color: blue;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
