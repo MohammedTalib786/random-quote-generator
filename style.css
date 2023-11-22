@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+:root{
+    --prim-clr: aqua;
+}
+
 body {
     width: 100%;
     height: 100vh;
@@ -16,11 +20,19 @@ body {
     background-color: #e6e6e6;
 }
 
+.fa-quote-left {
+    position: absolute;
+    font-size: 4rem;
+    color: #cbcbcb;
+    left: 1.5rem;
+    top: 3.4rem;
+}
+
 .box {
     position: relative;
     width: 40rem;
     height: 26rem;
-    background-color: blue;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -43,7 +55,7 @@ body {
     color: white;
     font-size: 1.11rem;
     padding: 0.45rem;
-    background-color: aqua;
+    background-color: var(--prim-clr);
     border-radius: 30px;
     cursor: pointer;
     transition: all linear .21s;
@@ -67,7 +79,7 @@ body {
     right: 0rem;
     top: -3rem;
     padding: 0.4rem 2.75rem;
-    background: aqua;
+    background: var(--prim-clr);
     font-size: .8rem;
     font-family: 'Poppins';
     border-radius: 9px;
@@ -78,7 +90,7 @@ body {
 
 .fa-twitter:hover {
     background-color: white;
-    color: aqua;
+    color: var(--prim-clr);
 }
 
 .fa-twitter:active {
@@ -113,7 +125,7 @@ body {
 }
 
 #btn {
-    background-color: aqua;
+    background-color: var(--prim-clr);
     padding: 0.92rem 0rem;
     border-radius: 10px;
     font-family: Poppins;
@@ -143,6 +155,11 @@ body {
     .tooltip {
         top: -4rem;
     }
+
+    .fa-quote-left {
+        font-size: 2.1rem;
+        top: 2.5rem;
+    }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 425px) {
@@ -152,6 +169,11 @@ body {
 
     .tooltip {
         top: -4rem;
+    }
+
+    .fa-quote-left {
+        font-size: 3rem;
+        top: 2rem;
     }
 }
 
