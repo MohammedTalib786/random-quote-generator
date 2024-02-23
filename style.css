@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Open+Sans:wght@400;500;600;700;800&family=Orbitron:wght@400;500&family=Outfit:wght@200;400;700&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@200;300;400;500;600&family=Raleway:ital,wght@0,200;0,300;0,400;0,600;0,800;0,900;1,700&family=Roboto:wght@300;500;700&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --prim-clr: aqua;
 }
 
@@ -60,7 +59,6 @@ body {
     cursor: pointer;
     transition: all linear .21s;
 }
-
 
 #copyBtn {
     font-size: 1.31rem;
@@ -121,13 +119,14 @@ body {
     font-size: .845rem;
     color: #5e5e5e;
     font-weight: 700;
-
 }
 
 #btn {
     background-color: var(--prim-clr);
     padding: 0.92rem 0rem;
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    border-end-start-radius: 10px;
+    border-end-end-radius: 10px;
     font-family: Poppins;
     font-size: .92rem;
     font-weight: 500;
@@ -135,13 +134,11 @@ body {
     border: none;
     cursor: pointer;
     transition: all linear .1s;
-
 }
 
 #btn:active {
     color: white;
 }
-
 
 
 
