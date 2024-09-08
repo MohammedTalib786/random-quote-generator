@@ -7,7 +7,13 @@
 }
 
 :root {
-    --prim-clr: aqua;
+    --primary-clr: #3F418D;
+    --light-body: #FFFFFF;
+    --light-box: #F9EDED;
+    --dark-body: #404040;
+    --dark-box: #292929;
+    --quote-icon-clr: #cbcbcb;
+    --twitter-icon-clr: aqua;
 }
 
 body {
@@ -16,13 +22,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e6e6e6;
+    background-color: var(--light-body);
+    transition: all .2s linear;
 }
 
 .fa-quote-left {
     position: absolute;
     font-size: 4rem;
-    color: #cbcbcb;
+    color: var(--quote-icon-clr);
     left: 1.5rem;
     top: 3.4rem;
 }
@@ -30,13 +37,14 @@ body {
 .box {
     position: relative;
     width: 40rem;
-    height: 26rem;
-    background-color: white;
+    min-height: 26rem;
+    background-color: var(--light-box);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-radius: 10px;
     box-shadow: 0px 0px 22px 2px #000000a1;
+    transition: all .2s linear;
 }
 
 .twitter {
@@ -47,17 +55,21 @@ body {
     align-items: center;
     padding-right: 1.5rem;
     column-gap: 2rem;
-
 }
 
 .fa-twitter {
     color: white;
     font-size: 1.11rem;
     padding: 0.45rem;
-    background-color: var(--prim-clr);
+    background-color: var(--twitter-icon-clr);
     border-radius: 30px;
     cursor: pointer;
     transition: all linear .21s;
+}
+
+.fa-twitter:hover {
+    background-color: white;
+    color: var(--twitter-icon-clr);
 }
 
 #copyBtn {
@@ -77,18 +89,13 @@ body {
     right: 0rem;
     top: -3rem;
     padding: 0.4rem 2.75rem;
-    background: var(--prim-clr);
+    background: var(--primary-clr);
     font-size: .8rem;
     font-family: 'Poppins';
     border-radius: 9px;
-    color: black;
+    color: white;
     letter-spacing: .2px;
     visibility: hidden;
-}
-
-.fa-twitter:hover {
-    background-color: white;
-    color: var(--prim-clr);
 }
 
 .fa-twitter:active {
@@ -98,7 +105,7 @@ body {
 .mainQuote {
     display: flex;
     flex-direction: column;
-    row-gap: 3rem;
+    row-gap: 2rem;
     padding: 1.5rem;
 }
 
@@ -116,15 +123,15 @@ body {
     display: flex;
     justify-content: flex-end;
     padding-right: 1rem;
-    font-size: .845rem;
+    font-size: .96rem;
     color: #5e5e5e;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 #btn {
-    background-color: var(--prim-clr);
+    background-color: var(--primary-clr);
+    color: white;
     padding: 0.92rem 0rem;
-    /* border-radius: 10px; */
     border-end-start-radius: 10px;
     border-end-end-radius: 10px;
     font-family: Poppins;
@@ -137,14 +144,56 @@ body {
 }
 
 #btn:active {
-    color: white;
+    color: var(--primary-clr);
+    background-color: var(--light-box);
 }
 
 
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Dark Mode  */
 
-/* ************ Media Queries ************ */
+.darkModeContainer {
+    padding: 2rem;
+    /* background: antiquewhite; */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: flex-end;
+}
 
-@media only screen and (max-width: 320px) {
+.darkModeBtn {
+    background: var(--primary-clr);
+    color: var(--light-box);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: all .4s linear;
+}
+
+.toggleBtn {
+    background: var(--light-box);
+    color: var(--primary-clr);
+}
+
+.darkModeBtn i {
+    font-size: 22px;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>> ENDS Dark Mode  */
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Media Queries  */
+
+@media (max-width: 320px) {
     body {
         padding: 0rem 2rem;
     }
@@ -157,9 +206,13 @@ body {
         font-size: 2.1rem;
         top: 2.5rem;
     }
+
+    .mainQuote {
+        padding: 2.2rem 1.5rem;
+    }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 321px) and (max-width: 425px) {
     body {
         padding: 0rem 2rem;
     }
@@ -174,8 +227,14 @@ body {
     }
 }
 
-@media only screen and (min-width: 425px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 768px) {
     body {
         padding: 0rem 2rem;
     }
+
+    .quote {
+        margin: 2.5rem 0 0;
+    }
 }
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ENDS Media Queries  */
